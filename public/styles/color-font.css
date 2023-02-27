@@ -1,0 +1,24 @@
+:root {
+  --logo-color: #ffffff;
+  --logo-background: #4056A1;
+  --logo-font: "Bungee", cursive;
+  
+  --body-color: #545149;
+  --body-background: #f4f1ec;
+  --body-font: "Source Sans Pro", sans-serif;
+}
+
+.logo-color {
+  color:var(--logo-color);
+  background-color: var(--logo-background);
+}
+
+.logo-font{
+  font-family: var(--logo-font);
+}
+
+.body {
+  color:var(--body-color);
+  background-color: var(--body-background);
+  font-family: var(--body-font);
+}

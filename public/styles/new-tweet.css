@@ -1,0 +1,19 @@
+@import url('color-font.css');
+
+#tweet-text {
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid var(--body-color);
+  padding-top: .5em;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button {
+  border: 0;
+
+  padding: .25em 0.5em
+}
