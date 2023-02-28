@@ -1,10 +1,8 @@
-
-
 $(document).ready(() => {
 
-    const populateOldTweets = () => {
+  const populateOldTweets = () => {
     const container = $('<div>').addClass('tweet');
-    
+
     //header:
     const header = $('<header>').addClass('tweet-header');
     const headerLeftSpan = $('<span>');
@@ -24,16 +22,28 @@ $(document).ready(() => {
     const iconflag = $('<i>').addClass('icon fa-solid fa-flag');
     const iconretweet = $('<i>').addClass('icon fa-solid fa-retweet');
     const iconheart = $('<i>').addClass('icon fa-solid fa-heart');
-    footerRightSpan.append(iconflag,iconheart,iconretweet);
-    footer.append(dateSpan,footerRightSpan);
+
+    footerRightSpan.append(iconflag, iconheart, iconretweet);
+    footer.append(dateSpan, footerRightSpan);
 
     //Full assembly:
-    container.append(header,tweetText,footer);
+    container.append(header, tweetText, footer);
+
+    // Event listeners
+    iconflag.on('mouseover mouseout', function () {
+      iconflag.toggleClass('hover-color icon');
+    });
+    iconretweet.on('mouseover mouseout', function () {
+      iconretweet.toggleClass('hover-color icon');
+    });
+    iconheart.on('mouseover mouseout', function () {
+      iconheart.toggleClass('hover-color icon');
+    });
 
     return container;
   };
 
- $('.old-tweets').append(populateOldTweets());
+  $('.old-tweets').append(populateOldTweets());
 
 });
 
