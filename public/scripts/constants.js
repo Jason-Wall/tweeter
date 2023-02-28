@@ -1,0 +1,1 @@
+const maxTweetLength = 140;
