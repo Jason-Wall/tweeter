@@ -19,9 +19,9 @@ $(document).ready(() => {
     const footer = $('<footer>').addClass('tweet-footer');
     const dateSpan = $('<span>').text('date');
     const footerRightSpan = $('<span>');
-    const iconflag = $('<i>').addClass('icon fa-solid fa-flag');
-    const iconretweet = $('<i>').addClass('icon fa-solid fa-retweet');
-    const iconheart = $('<i>').addClass('icon fa-solid fa-heart');
+    const iconflag = $('<i>').addClass('icon-color fa-solid fa-flag');
+    const iconretweet = $('<i>').addClass('icon-color fa-solid fa-retweet');
+    const iconheart = $('<i>').addClass('icon-color fa-solid fa-heart');
 
     footerRightSpan.append(iconflag, iconheart, iconretweet);
     footer.append(dateSpan, footerRightSpan);
@@ -30,15 +30,12 @@ $(document).ready(() => {
     container.append(header, tweetText, footer);
 
     // Event listeners
-    iconflag.on('mouseover mouseout', function () {
-      iconflag.toggleClass('hover-color icon');
-    });
-    iconretweet.on('mouseover mouseout', function () {
-      iconretweet.toggleClass('hover-color icon');
-    });
-    iconheart.on('mouseover mouseout', function () {
-      iconheart.toggleClass('hover-color icon');
-    });
+    const icons = [iconflag, iconretweet, iconheart];
+    for (let icon of icons) {
+      icon.on('mouseover mouseout', function () {
+        icon.toggleClass('hover-color icon-color');
+      });
+    };
 
     return container;
   };
