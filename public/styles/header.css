@@ -1,6 +1,6 @@
 @import url('color-font.css');
 
-header {
+.account-header {
   display: flex;
   flex-direction: column;
   align-items: center;

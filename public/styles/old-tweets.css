@@ -1,4 +1,4 @@
-.old-tweet {
+.tweet {
   border: 3px solid var(--body-color);
 }
 
@@ -10,4 +10,8 @@
 
 .tweet-footer {
   font-size: 18px;
+}
+
+.icon {
+  color: var(--logo-background);
 }
