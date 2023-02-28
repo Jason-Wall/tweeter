@@ -23,7 +23,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/constants.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body class="body">
@@ -32,7 +35,7 @@
       <span class="logo-font nav-layout">tweeter</span>
       <div class="nav-layout">
         <span ><b>Write</b> a new tweet</span>
-        <i class="arrow fa-sharp fa-solid fa-angles-down"></i>
+        <i class="red fa-sharp fa-solid fa-angles-down"></i>
       </div>
     </nav>
     <header>
@@ -48,15 +51,16 @@
     <main class="container">
       <section class="new-tweet">
         <form method="POST" action="/tweets">
-          <textarea name="text" class="body" id="tweet-text" maxlength="140" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" class="body" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="bottom">
             <button class="logo-color logo-font tweet-button"type="submit">Tweet</button>
-            <output name="counter" class="counter logo-font" for="tweet-text">140</output>
+            <output name="counter" id="counter" class="logo-font" for="tweet-text">140</output>
           </div>
         </form>
       </section>
     </main>
   </body>
+  <chicken>This is a chicken div</chicken>
 </html>
 
 <!-- <button>Cest un booton!</button> -->

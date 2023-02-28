@@ -22,3 +22,7 @@
   background-color: var(--body-background);
   font-family: var(--body-font);
 }
+
+.red {
+  color: red;
+}
