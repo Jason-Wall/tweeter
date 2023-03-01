@@ -5,10 +5,10 @@ $(document).ready(() => {
 
     //header:
     const header = $('<header>').addClass('tweet-header');
-    const headerLeftSpan = $('<span>');
+    const headerLeftSpan = $('<span>').addClass('header-left-span');
     const avatar = $('<i>').addClass('avatar fa-solid fa-skull');
     const userName = $('<span>').text('username');
-    const handle = $('<span>').text('handle');
+    const handle = $('<span>').text('handle').addClass('handle');
     headerLeftSpan.append(avatar, userName);
     header.append(headerLeftSpan, handle);
 
@@ -18,10 +18,10 @@ $(document).ready(() => {
     //footer:
     const footer = $('<footer>').addClass('tweet-footer');
     const dateSpan = $('<span>').text('date');
-    const footerRightSpan = $('<span>');
-    const iconflag = $('<i>').addClass('icon-color fa-solid fa-flag');
-    const iconretweet = $('<i>').addClass('icon-color fa-solid fa-retweet');
-    const iconheart = $('<i>').addClass('icon-color fa-solid fa-heart');
+    const footerRightSpan = $('<span>').addClass('footer-right-span');
+    const iconflag = $('<i>').addClass('icon icon-color fa-solid fa-flag');
+    const iconretweet = $('<i>').addClass('icon icon-color fa-solid fa-retweet');
+    const iconheart = $('<i>').addClass('icon icon-color fa-solid fa-heart');
 
     footerRightSpan.append(iconflag, iconheart, iconretweet);
     footer.append(dateSpan, footerRightSpan);
@@ -40,7 +40,8 @@ $(document).ready(() => {
     return container;
   };
 
+  for (let i = 0; i < 3; i++){
   $('.old-tweets').append(populateOldTweets());
-
+  }
 });
 

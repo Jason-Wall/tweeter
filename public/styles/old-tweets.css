@@ -1,17 +1,36 @@
 .tweet {
+  margin: 0.2em 0;
   border: 3px solid var(--body-color);
 }
 
 .tweet-header, .tweet-footer {
   display: flex;
   justify-content: space-between;
-  margin: 0.5em 0em;
+  align-items: center;
+  width: 98%;
+  margin: auto;
+  padding: 0.3em 0;
+  /* border: 1px solid pink; */
 }
 
 .tweet-footer {
   font-size: 18px;
 }
 
+.footer-right-span, .header-left-span{
+  display: flex;
+}
+
+.avatar {
+  font-size: 42px;
+  padding-right: 0.5em ;
+}
+
+.handle {
+  font-weight: 600;
+  opacity: 0.5;
+}
+
 .icon {
-  color: var(--logo-background);
+  padding: 0 0.3em;
 }
