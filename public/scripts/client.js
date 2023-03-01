@@ -88,12 +88,16 @@ const submitTweetAJAX = () => {
   });
 };
 
-// const loadTweetsAJAX = () => {
-//   $.get('/tweets',)
-// }
+const loadTweetsAJAX = () => {
+  $.ajax({
+    method: 'GET',
+    url: '/tweets'
+  })
+  .then((response) => {renderTweets(response)});
+}
 
 $(document).ready(() => {
-  renderTweets(tweetDB);
+  loadTweetsAJAX();
   submitTweetAJAX();
 });
 
