@@ -1,4 +1,4 @@
-const oldTweets = [
+const tweetDB = [
   {
     user: {
       name: "Newton",
@@ -24,18 +24,17 @@ const oldTweets = [
 ];
 
 
-$(document).ready(() => {
 
+$(document).ready(() => {
   const populateOldTweets = (tweet) => {
     const container = $('<div>').addClass('tweet');
 
     //header:
     const header = $('<header>').addClass('tweet-header');
     const headerLeftSpan = $('<span>').addClass('header-left-span');
-    // const avatar = $('<i>').addClass('avatar fa-solid fa-skull');
-    const avatar = $('<a>').attr('href', `${tweet.user.avatars}`);
-    const userName = $('<span>').text(`${tweet.user.name}`);
-    const handle = $('<span>').text(`${tweet.user.handle}`).addClass('handle');
+    const avatar = $('<img>').attr('src', tweet.user.avatars);
+    const userName = $('<span>').text(tweet.user.name);
+    const handle = $('<span>').text(tweet.user.handle).addClass('handle');
     headerLeftSpan.append(avatar, userName);
     header.append(headerLeftSpan, handle);
 
@@ -63,12 +62,11 @@ $(document).ready(() => {
         icon.toggleClass('hover-color icon-color');
       });
     };
-
     return container;
   };
   
-  for (let entry of oldTweets) () => {
-    console.log(entry);
+  for (let entry of tweetDB) {
+    console.log(entry.user.name);
     $('.old-tweets').append(populateOldTweets(entry));
   };
 });

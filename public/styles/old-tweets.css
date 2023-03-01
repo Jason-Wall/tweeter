@@ -19,6 +19,8 @@
 
 .footer-right-span, .header-left-span{
   display: flex;
+  align-items: center;
+  gap: .5em;
 }
 
 .avatar {
