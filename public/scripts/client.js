@@ -22,37 +22,13 @@ const populateTweet = (tweet) => {
   return tweetContainer;
 }; 
 
+
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-const renderTweets = (tweetDB) => {
-  for (let tweet of tweetDB) {
-    $('.old-tweets').prepend(populateTweet(tweet));
-  };
-}
-
-const submitTweetAJAX = () => {
-  const tweetForm = $('#tweet-form');
-  tweetForm.on('submit', function (event) {
-    event.preventDefault();
-    const serializedData = $(this).serialize();
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: serializedData
-    }).then(() => {
-      loadTweetsAJAX((results) => {
-        const newestTweet = [results.pop()];
-        $('.tweet-text').val('');
-        renderTweets(newestTweet);
-
-      })
-    })
-  });
-};
 
 const loadTweetsAJAX = (callback) => {
   $.ajax({
@@ -61,6 +37,42 @@ const loadTweetsAJAX = (callback) => {
   })
     .then((result) => {callback(result)})
 };
+
+
+const submitTweetAJAX = () => {
+  const tweetForm = $('#tweet-form');
+  tweetForm.on('submit', function (event) {
+    event.preventDefault();
+    //test edge cases
+    const tweetText = $('.tweet-text').val();
+    if(!tweetText || tweetText.length > maxTweetLength) {
+      console.log('bad tweet text');
+      return;
+    }
+
+    const serializedData = $(this).serialize();
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: serializedData
+    })
+    .then(() => {
+      loadTweetsAJAX((results) => {
+        const newestTweet = [results.pop()];
+        $('.tweet-text').val('');
+        renderTweets(newestTweet);
+      })
+    })
+  });
+};
+
+
+const renderTweets = (tweetDB) => {
+  for (let tweet of tweetDB) {
+    $('.old-tweets').prepend(populateTweet(tweet));
+  };
+}
+
 
 $(document).ready(() => {
   submitTweetAJAX();
