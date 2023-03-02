@@ -6,6 +6,7 @@
  * Do not modify these two selectors, please
  */
 html {
+  font-size: 16px;
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -17,7 +18,7 @@ html {
  */
 
 body {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 main {
@@ -29,6 +30,12 @@ main {
 }
 
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+@media only screen and (min-width:1025px) {
+  html {
+    font-size: 18px;
+  }
+  body{
+    display: flex;
+    justify-content: stretch;
+  }
+}

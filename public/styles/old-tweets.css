@@ -1,9 +1,9 @@
 .tweet {
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
   border: 3px solid var(--body-color);
 }
 
-.box-shadow {
+.tweet:hover {
   box-shadow: 3px 3px 0 var(--box-shadow);
 }
 
@@ -13,30 +13,37 @@
   align-items: center;
   width: 98%;
   margin: auto;
-  padding: 0.3em 0;
-  /* border: 1px solid pink; */
-}
-
-.tweet-footer {
-  font-size: 18px;
+  padding: 0.3rem 0;
 }
 
 .footer-right-span, .header-left-span{
   display: flex;
   align-items: center;
-  gap: .5em;
+  gap: .5rem;
 }
 
 .avatar {
-  font-size: 42px;
-  padding-right: 0.5em ;
+  font-size: 3rem;
+  padding-right: 0.5rem ;
 }
 
 .handle {
   font-weight: 600;
-  opacity: 0.5;
+  color: var(--box-shadow);
 }
 
 .icon {
-  padding: 0 0.3em;
+  padding: 0 0.3rem;
+  color: var(--logo-background);
+}
+
+.icon:hover {
+  color: var(--hover-color);
+}
+
+@media only screen and (min-width:1025px) {
+  .old-tweets{
+    margin:.5rem;
+    /* float: right; */
+  }
 }

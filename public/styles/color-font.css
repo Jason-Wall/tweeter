@@ -6,6 +6,11 @@
   --body-color: #545149;
   --body-background: #f4f1ec;
   --body-font: "Source Sans Pro", sans-serif;
+
+  --header-background: rgb(255, 187, 0);
+
+  --hover-color:var(--header-background);
+
   --box-shadow: #818078;
 }
 
@@ -28,10 +33,6 @@
 
 .red {
   color: red;
-}
-
-.hover-color {
-  color: rgb(235, 198, 79);
 }
 
 .icon-color{
