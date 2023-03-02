@@ -45,8 +45,17 @@ const submitTweetAJAX = () => {
     event.preventDefault();
     //test edge cases
     const tweetText = $('.tweet-text').val();
+    const errorSpan = $('.error');
+    errorSpan.hide('fast');
+    
+    if(tweetText.length > maxTweetLength) {
+      errorSpan.text('Too Long');
+      errorSpan.slideDown('slow')
+      return;
+    }
     if(!tweetText || tweetText.length > maxTweetLength) {
-      console.log('bad tweet text');
+      errorSpan.text('No Tweet');
+      errorSpan.slideDown('slow')
       return;
     }
 
@@ -60,6 +69,7 @@ const submitTweetAJAX = () => {
       loadTweetsAJAX((results) => {
         const newestTweet = [results.pop()];
         $('.tweet-text').val('');
+        $('#counter').text(140);
         renderTweets(newestTweet);
       })
     })
