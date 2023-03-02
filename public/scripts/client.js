@@ -21,10 +21,10 @@ const populateTweet = (tweet) => {
   </article>`);
   return tweetContainer;
 
-}; 
+};
 
 
-const escapeText = function (str) {
+const escapeText = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -36,24 +36,26 @@ const loadTweetsAJAX = (callback) => {
     method: 'GET',
     url: '/tweets'
   })
-    .then((result) => {callback(result)})
+    .then((result) => {
+      callback(result);
+    });
 };
 
 
 const submitTweetAJAX = () => {
   const tweetForm = $('#tweet-form');
-  tweetForm.on('submit', function (event) {
+  tweetForm.on('submit', function(event) {
     event.preventDefault();
     //test edge cases
     const tweetText = $('.tweet-text').val();
     const errorSpan = $('.error').hide('fast');
     
-    if(tweetText.length > maxTweetLength) {
+    if (tweetText.length > maxTweetLength) {
       errorSpan.text('This tweeeeet is toooo loooong...');
       errorSpan.slideDown('fast');
       return;
     }
-    if(!tweetText) {
+    if (!tweetText) {
       errorSpan.text('Silence is a statment unto itself (tweet is empty or invalid)');
       errorSpan.slideDown('fast');
       return;
@@ -65,23 +67,23 @@ const submitTweetAJAX = () => {
       url: '/tweets',
       data: serializedData
     })
-    .then(() => {
-      loadTweetsAJAX((results) => {
-        const newestTweet = [results.pop()];
-        $('.tweet-text').val('');
-        $('#counter').text(140);
-        renderTweets(newestTweet);
-      })
-    })
+      .then(() => {
+        loadTweetsAJAX((results) => {
+          const newestTweet = [results.pop()];
+          $('.tweet-text').val('');
+          $('#counter').text(140);
+          renderTweets(newestTweet);
+        });
+      });
   });
 };
 
 
 const renderTweets = (tweetDB) => {
   for (let tweet of tweetDB) {
-    $('.old-tweets').prepend(populateTweet(tweet));    
-  };
-}
+    $('.old-tweets').prepend(populateTweet(tweet));
+  }
+};
 
 
 $(document).ready(() => {

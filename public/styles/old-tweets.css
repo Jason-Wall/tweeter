@@ -2,7 +2,6 @@
   margin: 0.5rem 0;
   border: 3px solid var(--body-color);
 }
-
 .tweet:hover {
   box-shadow: 3px 3px 0 var(--box-shadow);
 }
@@ -22,21 +21,20 @@
   gap: .5rem;
 }
 
-.avatar {
-  font-size: 3rem;
-  padding-right: 0.5rem ;
-}
-
 .handle {
   font-weight: 600;
   color: var(--box-shadow);
+}
+
+.avatar {
+  font-size: 3rem;
+  padding-right: 0.5rem ;
 }
 
 .icon {
   padding: 0 0.3rem;
   color: var(--logo-background);
 }
-
 .icon:hover {
   color: var(--hover-color);
 }
@@ -44,6 +42,5 @@
 @media only screen and (min-width:1025px) {
   .old-tweets{
     margin:.5rem;
-    /* float: right; */
   }
 }

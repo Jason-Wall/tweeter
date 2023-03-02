@@ -28,7 +28,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/constants.js"></script>
@@ -39,7 +41,7 @@
 
 <body class="body">
   <!-- Top nav bar (fixed) -->
-  <nav class="logo-color">
+  <nav>
     <span class="logo-font nav-layout">tweeter</span>
     <div class="nav-layout">
       <span><strong>Write</strong> a new tweet</span>
@@ -51,21 +53,19 @@
       <img src="/images/profile-hex.png">
     </div>
     <div>
-      <h2 class:"user"><b>Your</b> Name</h2>
+      <span><strong>Daniel</strong> Plainview</span>
     </div>
   </header>
-<script>"alert('hello')"</script>
+  <script>"alert('hello')"</script>
   <!-- Page-specific (main) content here -->
-  <main class="container">
+  <main>
     <section class="new-tweet">
       <form id="tweet-form" method="POST" action="/tweets">
         <textarea name="text" class="body tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="bottom">
           <button class="logo-color logo-font tweet-button" type="submit">Tweet</button>
-          
-            <span class="error red"></span>
-            <output name="counter" id="counter" class="logo-font">140</output>
-          
+          <span class="error"></span>
+          <output name="counter" id="counter" class="logo-font">140</output>
         </div>
       </form>
     </section>
@@ -74,5 +74,3 @@
 </body>
 
 </html>
-
-<!-- <button>Cest un booton!</button> -->

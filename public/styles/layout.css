@@ -19,6 +19,7 @@ html {
 
 body {
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 main {
@@ -32,7 +33,7 @@ main {
 
 @media only screen and (min-width:1025px) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
   body{
     display: flex;

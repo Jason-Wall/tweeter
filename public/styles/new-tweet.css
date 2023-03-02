@@ -9,14 +9,12 @@
   border-bottom: 3px solid var(--body-color);
   padding-top: .5rem;
   font-weight: 600;
-  /* border: 1px solid pink; */
 }
 
 .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 0.5em 0em; */
   height:3rem;
 }
 
