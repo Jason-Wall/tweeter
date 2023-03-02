@@ -6,6 +6,7 @@
   --body-color: #545149;
   --body-background: #f4f1ec;
   --body-font: "Source Sans Pro", sans-serif;
+  --box-shadow: #818078;
 }
 
 .logo-color {
@@ -23,6 +24,8 @@
   font-family: var(--body-font);
 }
 
+
+
 .red {
   color: red;
 }
@@ -33,4 +36,10 @@
 
 .icon-color{
   color: var(--logo-background);
+}
+
+.error {
+  color: red;
+  font-size: 22px;
+  font-weight: 600;
 }

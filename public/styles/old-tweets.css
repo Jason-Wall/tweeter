@@ -1,6 +1,10 @@
 .tweet {
-  margin: 0.2em 0;
+  margin: 0.5em 0;
   border: 3px solid var(--body-color);
+}
+
+.box-shadow {
+  box-shadow: 3px 3px 0 var(--box-shadow);
 }
 
 .tweet-header, .tweet-footer {

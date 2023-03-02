@@ -20,6 +20,7 @@ const populateTweet = (tweet) => {
     </footer>
   </article>`);
   return tweetContainer;
+
 }; 
 
 
@@ -79,6 +80,21 @@ const submitTweetAJAX = () => {
 const renderTweets = (tweetDB) => {
   for (let tweet of tweetDB) {
     $('.old-tweets').prepend(populateTweet(tweet));
+    
+    // Event Listeners:
+    const tweetBox = $('.tweet').first();
+    tweetBox.on('mouseover mouseout', function() {
+      tweetBox.toggleClass('box-shadow');
+    })
+
+
+    const icons = [$('.fa-flag').first(), $('.fa-heart').first(), $('.fa-retweet').first()];
+    for (let icon of icons) {
+    icon.on('mouseover mouseout', function () {
+      icon.toggleClass('hover-color icon-color');
+    });
+  };
+    
   };
 }
 

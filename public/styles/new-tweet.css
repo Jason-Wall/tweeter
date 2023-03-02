@@ -15,12 +15,18 @@
 .bottom {
   display: flex;
   justify-content: space-between;
-  margin: 0.5em 0em;
+  align-items: center;
+  /* margin: 0.5em 0em; */
+  height:60px;
 }
 
 .tweet-button {
   border: 0;
   padding: .25em 0.5em
+}
+
+#counter {
+  width: 60px;
 }
 
 
