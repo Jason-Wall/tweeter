@@ -45,17 +45,16 @@ const submitTweetAJAX = () => {
     event.preventDefault();
     //test edge cases
     const tweetText = $('.tweet-text').val();
-    const errorSpan = $('.error');
-    errorSpan.hide('fast');
+    const errorSpan = $('.error').hide('fast');
     
     if(tweetText.length > maxTweetLength) {
-      errorSpan.text('Too Long');
-      errorSpan.slideDown('slow')
+      errorSpan.text('This tweeeeet is toooo loooong...');
+      errorSpan.slideDown('fast');
       return;
     }
-    if(!tweetText || tweetText.length > maxTweetLength) {
-      errorSpan.text('No Tweet');
-      errorSpan.slideDown('slow')
+    if(!tweetText) {
+      errorSpan.text('Silence is a statment unto itself (tweet is empty or invalid)');
+      errorSpan.slideDown('fast');
       return;
     }
 
