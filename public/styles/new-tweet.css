@@ -1,14 +1,24 @@
 @import url('color-font.css');
 
+.new-tweet {
+  display: block;
+  margin:.5rem;
+
+}
+
+.new-tweet.hide {
+  display: none;
+}
+
 .tweet-text {
   width: 98%;
-  margin:auto;
-  padding: .5rem 0;
+  margin: auto;
+  padding: .5rem;
   resize: none;
   border: none;
   border-bottom: 3px solid var(--body-color);
-  padding-top: .5rem;
   font-weight: 600;
+  overflow-wrap: break-word;
 }
 
 .bottom {
@@ -25,12 +35,4 @@
 
 #counter {
   width: 3rem;
-}
-
-@media only screen and (min-width:1025px) {
-  .new-tweet{
-    float: right;
-    margin:.5rem;
-    padding-top: 5rem;
-  }
 }

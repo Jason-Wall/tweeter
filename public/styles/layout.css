@@ -16,11 +16,14 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   font-size: 1.5rem;
   font-weight: 400;
 }
+
+
+
+
 
 main {
   display: flex;
@@ -33,10 +36,14 @@ main {
 
 @media only screen and (min-width:1025px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
   body{
-    display: flex;
+    display: block;
     justify-content: stretch;
+  }
+ 
+  .container {
+    padding-top: 5rem;
   }
 }
