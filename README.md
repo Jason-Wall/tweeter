@@ -16,7 +16,7 @@ This repository forked from a [Lighthouse Labs starter code](https://github.com/
 [02_mobile](https://github.com/Jason-Wall/tweeter/blob/master/docs/02_Mobile_Friendly.gif)
 
 ### Neat animations!
-https://github.com/Jason-Wall/tweeter/blob/master/docs/03_Animations.gif
+<img src="https://github.com/Jason-Wall/tweeter/blob/master/docs/03_Animations.gif"/>
 
 [03_animations](https://github.com/Jason-Wall/tweeter/blob/master/docs/03_Animations.gif)
 
