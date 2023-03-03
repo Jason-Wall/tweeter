@@ -6,10 +6,18 @@ This repository forked from a [Lighthouse Labs starter code](https://github.com/
 
 ## Things you can do
 ### Share your philosophical rantings with a collection of randomly generated users!
+<img src="https://github.com/Jason-Wall/tweeter/blob/master/docs/01_Tweet.gif"/>
+
 [01_tweet](https://github.com/Jason-Wall/tweeter/blob/master/docs/01_Tweet.gif)
+
 ### Optimized for mobile and desktop!
+<img src="https://github.com/Jason-Wall/tweeter/blob/master/docs/02_Mobile_Friendly.gif"/>
+
 [02_mobile](https://github.com/Jason-Wall/tweeter/blob/master/docs/02_Mobile_Friendly.gif)
+
 ### Neat animations!
+https://github.com/Jason-Wall/tweeter/blob/master/docs/03_Animations.gif
+
 [03_animations](https://github.com/Jason-Wall/tweeter/blob/master/docs/03_Animations.gif)
 
 ## Dependencies
