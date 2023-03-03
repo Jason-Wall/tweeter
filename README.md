@@ -34,7 +34,7 @@ This repository forked from a [Lighthouse Labs starter code](https://github.com/
 
 1. Clone or fork the repo to a suitable workspace.
 2. Install all dependencies via `npm install`
-3. From CLI in the project directory `npm run local' to start the server.
+3. From CLI in the project directory `npm run local` to start the server.
 4. Open your browser of choice and navigate to [localhost:8080](localhost:8080)
 
 
