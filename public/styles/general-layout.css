@@ -21,10 +21,6 @@ body {
   font-weight: 400;
 }
 
-
-
-
-
 main {
   display: flex;
   justify-content: center;
@@ -33,17 +29,15 @@ main {
   margin:auto;
 }
 
+.container {
+  padding-top: 5rem;
+}
 
 @media only screen and (min-width:1025px) {
   html {
     font-size: 18px;
   }
-  body{
-    display: block;
-    justify-content: stretch;
-  }
- 
-  .container {
-    padding-top: 5rem;
+  .container{
+    display: flex;
   }
 }

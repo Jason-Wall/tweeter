@@ -36,3 +36,9 @@
 #counter {
   width: 3rem;
 }
+
+@media only screen and (min-width:1025px) {
+  .new-tweet{
+    width: 66vw;
+  }
+}
